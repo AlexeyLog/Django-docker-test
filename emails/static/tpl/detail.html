@@ -1,0 +1,12 @@
+<div ng-controller="BaseCtrl">
+    <h2>Emails</h2>
+    <table>
+        <tr ng-repeat="email in emails">
+            <td>{{email.email_id}}</td>
+            <td>{{email.from_address}}</td>
+            <td>{{email.to_address}}</td>
+            <td>{{email.body}}</td>
+            <td>{{email.timestamp}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load staticfiles %}
+    <script src="{% static '/bower_components/angular/angular.js'%}"></script>
+    <script src="{% static '/bower_components/angular-route/angular-route.js'%}"></script>
+    <script src="{% static '/js/app.js'%}"></script>
+</head>
+<body>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'emails' %}">Process Emails</a>
+
+    <div>
+        <h3>Login with Google:</h3>
+        <a href="{% url 'google-auth' %}"><img src="{% static '/img/google.png' %}" alt="" width="50px"></a>
+    </div>
+
+    <a href="#/base">Show emails</a>
+    <a href="#/logout">LogOut</a>
+
+    <div ng-view></div>
+
+
+
+
+</body>
+</html>
